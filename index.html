@@ -7,17 +7,60 @@
 <meta name="description" content="Jacek Artemiuk — Project Manager z Warszawy. 20+ lat we wdrożeniach systemów IT, IoT i automatyzacji AI.">
 <link rel="alternate" hreflang="en" href="https://jackart.pl/en/">
 <link rel="alternate" hreflang="pl" href="https://jackart.pl/">
+<link rel="icon" href="data:,">
 <style>
-  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 46em; margin: 3em auto; padding: 0 1.2em; color: #1a1a1a; line-height: 1.65; }
-  h1 { font-size: 1.7em; margin-bottom: 0.1em; }
-  h2 { font-size: 1.15em; margin-top: 2em; border-bottom: 1px solid #ddd; padding-bottom: 0.3em; }
-  .sub { color: #555; margin-top: 0; }
-  .lang { text-align: right; font-size: 0.85em; }
-  .lang a { color: #555; text-decoration: none; }
-  .lang a:hover { text-decoration: underline; }
-  ul { padding-left: 1.3em; }
-  footer { margin-top: 3em; font-size: 0.8em; color: #777; border-top: 1px solid #ddd; padding-top: 1em; }
-  footer a { color: #555; }
+  :root {
+    --ink: #1b1f24;
+    --muted: #5a6470;
+    --line: #e3e7eb;
+    --accent: #2f4f6f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    color: var(--ink); line-height: 1.65; margin: 0;
+    background: #fafbfc;
+  }
+  .wrap { max-width: 52em; margin: 0 auto; padding: 2.5em 1.4em 3em; }
+  .lang { text-align: right; font-size: 0.82em; letter-spacing: 0.04em; margin-bottom: 2em; }
+  .lang a { color: var(--muted); text-decoration: none; }
+  .lang a:hover { color: var(--accent); }
+  .lang .sep { color: var(--line); margin: 0 0.4em; }
+
+  .hero { display: flex; gap: 2em; align-items: center; margin-bottom: 2.6em; }
+  .hero img {
+    width: 148px; height: 148px; object-fit: cover; border-radius: 50%;
+    border: 3px solid #fff; box-shadow: 0 1px 6px rgba(0,0,0,0.14);
+    flex-shrink: 0;
+  }
+  .hero h1 { font-size: 1.65em; margin: 0 0 0.15em; letter-spacing: -0.01em; }
+  .hero .sub { color: var(--muted); margin: 0 0 1em; font-size: 1.02em; }
+  .cta {
+    display: inline-block; background: var(--accent); color: #fff;
+    padding: 0.55em 1.15em; border-radius: 6px; text-decoration: none;
+    font-size: 0.92em; font-weight: 500;
+  }
+  .cta:hover { background: #27425c; }
+
+  h2 {
+    font-size: 1.05em; margin: 2.2em 0 0.6em; padding-bottom: 0.35em;
+    border-bottom: 1px solid var(--line);
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent);
+  }
+  ul { padding-left: 1.25em; margin: 0.6em 0; }
+  li { margin-bottom: 0.25em; }
+
+  footer {
+    margin-top: 3em; padding-top: 1.2em; border-top: 1px solid var(--line);
+    font-size: 0.85em; color: var(--muted);
+    display: flex; flex-wrap: wrap; gap: 0.4em 1.1em;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    .hero { flex-direction: column; text-align: center; gap: 1.2em; }
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -26,6 +69,7 @@
   "name": "Jacek Artemiuk",
   "jobTitle": "Project Manager",
   "description": "Project Manager z Warszawy specjalizujący się we wdrożeniach automatyzacji AI i integracji systemów.",
+  "image": "https://jackart.pl/portrait.jpg",
   "address": { "@type": "PostalAddress", "addressLocality": "Warszawa", "addressCountry": "PL" },
   "knowsAbout": ["project management", "automatyzacja procesów", "integracja systemów", "LLM", "n8n", "IoT", "RAG"],
   "sameAs": [
@@ -40,30 +84,40 @@
 </script>
 </head>
 <body>
-<div class="lang"><a href="/en/">EN</a> | <strong>PL</strong></div>
-<h1>Jacek Artemiuk</h1>
-<p class="sub">Project Manager z Warszawy. 20+ lat we wdrożeniach systemów IT, IoT i automatyzacji AI.</p>
+<div class="wrap">
+  <div class="lang"><a href="/en/">EN</a><span class="sep">|</span><strong>PL</strong></div>
 
-<h2>Czym się zajmuję</h2>
-<p>Prowadzę projekty integracji systemów i automatyzacji procesów — od voicebotów AI (ASR/NLP/TTS, &gt;5 mln PLN) przez systemy contact center (2000 agentów) po własne workflowy LLM (n8n, RAG, modele lokalne).</p>
+  <div class="hero">
+    <img src="/portrait.jpg" alt="Jacek Artemiuk">
+    <div>
+      <h1>Jacek Artemiuk</h1>
+      <p class="sub">Project Manager z Warszawy. 20+ lat we wdrożeniach systemów IT, IoT i automatyzacji AI.</p>
+      <a class="cta" href="https://cal.com/jacek.artemiuk/meeting">Umów rozmowę →</a>
+    </div>
+  </div>
 
-<h2>Wybrane liczby</h2>
-<ul>
-  <li>20+ lat doświadczenia, 9 organizacji</li>
-  <li>Voicebot AI: &gt;5 mln PLN, 3 dostawców, 3 iteracje architektury</li>
-  <li>Contact center: 2000 agentów</li>
-  <li>Stack prywatny: 20+ workflowów automatyzacji, self-hosted, zero chmury publicznej</li>
-</ul>
+  <h2>Czym się zajmuję</h2>
+  <p>Prowadzę projekty integracji systemów i automatyzacji procesów — od voicebotów AI (ASR/NLP/TTS, &gt;5 mln PLN) przez systemy contact center (2000 agentów) po własne workflowy LLM (n8n, RAG, modele lokalne).</p>
 
-<h2>Jak pracuję</h2>
-<p>Dokumentuję proces — włącznie z błędami. Case studies i notatki techniczne będą publikowane w sekcji Notatki.</p>
+  <h2>Wybrane liczby</h2>
+  <ul>
+    <li>20+ lat doświadczenia, 9 organizacji</li>
+    <li>Voicebot AI: &gt;5 mln PLN, 3 dostawców, 3 iteracje architektury</li>
+    <li>Contact center: 2000 agentów</li>
+    <li>Stack prywatny: 20+ workflowów automatyzacji, self-hosted, zero chmury publicznej</li>
+  </ul>
 
-<footer>
-  <a href="https://www.linkedin.com/in/jacek-artemiuk/">LinkedIn</a> ·
-  <a href="https://github.com/xxjackart">GitHub</a> ·
-  <a href="https://www.goodreads.com/jacekartemiuk">Goodreads</a> ·
-  <a href="https://www.strava.com/athletes/21736216">Strava</a> ·
-  <a href="mailto:jacek.artemiuk@gmail.com">E-mail</a>
-</footer>
+  <h2>Jak pracuję</h2>
+  <p>Dokumentuję proces — włącznie z błędami. Case studies i notatki techniczne będą publikowane w sekcji Notatki.</p>
+
+  <footer>
+    <a href="https://www.linkedin.com/in/jacek-artemiuk/">LinkedIn</a>
+    <a href="https://github.com/xxjackart">GitHub</a>
+    <a href="https://www.goodreads.com/jacekartemiuk">Goodreads</a>
+    <a href="https://www.strava.com/athletes/21736216">Strava</a>
+    <a href="https://cal.com/jacek.artemiuk/meeting">Cal.com</a>
+    <a href="mailto:jacek.artemiuk@gmail.com">E-mail</a>
+  </footer>
+</div>
 </body>
 </html>
